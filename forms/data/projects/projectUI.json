@@ -1,0 +1,21 @@
+{
+	"name": {
+		"ui:placeholder": "PCI XYZ",
+		"ui:testid": "project-name"
+	},
+	"description": {
+		"ui:placeholder": "Short project description",
+		"ui:testid": "project-description"
+	},
+	"dueDate": {
+		"ui:widget": "date"
+	},
+	"organization": {
+		"ui:widget": "select",
+		"ui:placeholder": "Select Organization"
+	},
+	"scannerNode": {
+		"ui:widget": "select",
+		"ui:placeholder": "Select Scanner Node"
+	}
+}

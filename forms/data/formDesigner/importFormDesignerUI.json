@@ -1,0 +1,10 @@
+{
+	"type": {
+		"ui:placeholder": "Select a Component",
+		"ui:widget": "search"
+	},
+	"name": {
+		"ui:placeholder": "Select a Field",
+		"ui:widget": "search"
+	}
+}

@@ -1,0 +1,63 @@
+# build output
+dist
+.next
+target
+
+# dependencies
+.yarn
+node_modules
+package-lock.json
+yarn.lock
+!/yarn.lock
+test/node_modules
+
+# logs & pids
+*.log
+pids
+*.cpuprofile
+
+# coverage
+.nyc_output
+coverage
+
+# test output
+test/**/out*
+test/**/next-env.d.ts
+.DS_Store
+/e2e-tests
+test/tmp/**
+
+# Editors
+**/.idea
+**/.#*
+
+# examples
+examples/**/out
+examples/**/.env*.local
+
+pr-stats.md
+test-timings.json
+
+# Vercel
+.vercel
+.now
+
+# Cache
+*.tsbuildinfo
+
+# env
+.env
+.env.local
+.env.staging
+.env.prod
+.env.production
+cypress.env.json
+
+# Cypress
+cypress/screenshots
+cypress/videos
+
+public/mockServiceWorker.js
+
+# development environment
+.vscode

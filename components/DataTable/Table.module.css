@@ -1,0 +1,21 @@
+.container {
+	/* width: 100%; */
+	min-width: 100%;
+	/* max-width: 100%; */
+	table-layout: fixed;
+}
+
+.selectable {
+	cursor: pointer;
+}
+
+.tableRowDetails {
+	background: #ffffff29;
+}
+
+.tableData {
+	height: inherit;
+	white-space: pre-wrap;
+	font-size: 14px;
+	line-height: 24px;
+}
