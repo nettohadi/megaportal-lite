@@ -53,7 +53,11 @@ Additional guidelines:
 - Provide a detailed README file that includes instructions for setting up the project, running the application, and any other relevant information.
 
 Please note that the provided video link should be reviewed to gain a better understanding of the bugs and their context.
-https://file.io/Kq9k96ETImfb
+https://youtu.be/sOKjmCSrPI8
+https://youtu.be/1FC2kM2nNXw
+
+
+
 
 ## Authentication
 Get your NEXT_PUBLIC_ACCESS_TOKEN by following this instruction
