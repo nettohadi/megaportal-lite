@@ -1,3 +1,4 @@
+import { PciStatus } from 'types/scan-reports';
 import { Target } from 'types/scans';
 
 export interface SyncTargetStatusInput {
@@ -13,6 +14,9 @@ export interface SyncTargetStatusResponse {
  * Syncs Saint's Scan
  */
 export function syncTargetStatus(input: SyncTargetStatusInput) {
-	const pciStatus = Math.random() < 0.5 ? 'Passed' : 'Failure';
-	return Promise.resolve({ vulnerabilitiesCount: 0, pciStatus });
+	const randomValue = Math.random() < 0.5 ? 'Passed' : 'Failure';
+	return Promise.resolve({
+		vulnerabilitiesCount: 0,
+		pciStatus: PciStatus[randomValue as keyof typeof PciStatus],
+	});
 }
