@@ -1,7 +1,5 @@
 import { SortingFn, SortingFnOption } from '@tanstack/react-table';
 
-import { VulnerabilityDetailsFragment } from 'graphql/vulnerabilities.graphql';
-
 import { ScanFinding } from './scans';
 
 function toString(a: any) {
@@ -75,24 +73,6 @@ export enum FindingSeverity {
 	High = 'High',
 }
 export const FindingSeverityOrder = Object.values(FindingSeverity);
-export const sortFindingsBySeverity: SortingFn<VulnerabilityDetailsFragment> = (
-	a,
-	b,
-	columnId
-) => {
-	const AVal = toString(a.getValue(columnId));
-	const BVal = toString(b.getValue(columnId));
-
-	if (AVal && !BVal) return -1;
-	if (!AVal && BVal) return 1;
-	if (!AVal && !BVal) return 0;
-
-	// Ignore ts error because we know the values are in the enum
-	return (
-		// @ts-ignore
-		FindingSeverityOrder.indexOf(AVal) - FindingSeverityOrder.indexOf(BVal)
-	);
-};
 
 export enum FindingCompliance {
 	Open = 'Open',
@@ -101,19 +81,3 @@ export enum FindingCompliance {
 	SpecialNotes = 'SpecialNotes',
 }
 export const FindingComplianceOrder = Object.values(FindingCompliance);
-export const sortFindingsByComplianceOrder: SortingFn<
-	VulnerabilityDetailsFragment
-> = (a, b, columnId) => {
-	const AVal = toString(a.getValue(columnId));
-	const BVal = toString(b.getValue(columnId));
-
-	if (AVal && !BVal) return -1;
-	if (!AVal && BVal) return 1;
-	if (!AVal && !BVal) return 0;
-
-	// Ignore ts error because we know the values are in the enum
-	return (
-		// @ts-ignore
-		FindingComplianceOrder.indexOf(AVal) - FindingComplianceOrder.indexOf(BVal)
-	);
-};

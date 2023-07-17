@@ -10,14 +10,12 @@ interface TargetsSectionProps {
 	editMode?: boolean;
 	targets: MockTarget[];
 	containerStyles?: any;
-	apiToken: string;
 }
 
 export function TargetsSection({
 	editMode,
 	targets,
 	containerStyles,
-	apiToken,
 }: TargetsSectionProps) {
 	// columnHelper returns a utility for creating different column definition types
 	const columnHelper = createColumnHelper<MockTarget>();
@@ -48,7 +46,6 @@ export function TargetsSection({
 				tablePosition='top'
 				targets={targets}
 				containerStyles={containerStyles}
-				apiToken={apiToken}
 			/>
 		);
 	}
